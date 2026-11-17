@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/foodflow-orders
+configfile: setup.cfg
+testpaths: tests
+plugins: platformdirs-4.13.0, cov-7.1.0
+collecting ... collected 29 items
+
+tests/test_api.py::test_health PASSED                                    [  3%]
+tests/test_api.py::test_crear_y_consultar_pedido PASSED                  [  6%]
+tests/test_api.py::test_campo_requerido PASSED                           [ 10%]
+tests/test_api.py::test_pedido_sin_items PASSED                          [ 13%]
+tests/test_api.py::test_pedido_inexistente PASSED                        [ 17%]
+tests/test_api.py::test_cambio_de_estado_valido_e_invalido PASSED        [ 20%]
+tests/test_domain.py::test_subtotal_y_total_sin_descuento PASSED         [ 24%]
+tests/test_domain.py::test_total_con_descuento_y_despacho PASSED         [ 27%]
+tests/test_domain.py::test_total_nunca_negativo_por_descuento PASSED     [ 31%]
+tests/test_domain.py::test_cantidad_invalida[0] PASSED                   [ 34%]
+tests/test_domain.py::test_cantidad_invalida[-1] PASSED                  [ 37%]
+tests/test_domain.py::test_precio_negativo PASSED                        [ 41%]
+tests/test_domain.py::test_ciclo_de_vida_valido PASSED                   [ 44%]
+tests/test_domain.py::test_transicion_invalida PASSED                    [ 48%]
+tests/test_domain.py::test_pedido_cancelado_es_final PASSED              [ 51%]
+tests/test_pricing.py::test_sin_descuento PASSED                         [ 55%]
+tests/test_pricing.py::test_descuento_porcentual PASSED                  [ 58%]
+tests/test_pricing.py::test_descuento_porcentual_redondea_a_peso_entero PASSED [ 62%]
+tests/test_pricing.py::test_porcentaje_fuera_de_rango[-1] PASSED         [ 65%]
+tests/test_pricing.py::test_porcentaje_fuera_de_rango[101] PASSED        [ 68%]
+tests/test_pricing.py::test_descuento_por_compra_minima PASSED           [ 72%]
+tests/test_pricing.py::test_despacho_fijo PASSED                         [ 75%]
+tests/test_pricing.py::test_despacho_gratis_sobre_umbral PASSED          [ 79%]
+tests/test_service_events.py::test_crear_pedido_aplica_descuento_y_publica_evento PASSED [ 82%]
+tests/test_service_events.py::test_pedido_vacio_rechazado PASSED         [ 86%]
+tests/test_service_events.py::test_cambio_de_estado_publica_evento PASSED [ 89%]
+tests/test_service_events.py::test_estado_inexistente PASSED             [ 93%]
+tests/test_service_events.py::test_listar_por_cliente PASSED             [ 96%]
+tests/test_service_events.py::test_fallo_de_un_suscriptor_no_afecta_a_otros PASSED [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name                       Stmts   Miss  Cover   Missing
+--------------------------------------------------------
+src/orders/__init__.py         1      0   100%
+src/orders/api.py             44      0   100%
+src/orders/domain.py          48      0   100%
+src/orders/events.py          18      0   100%
+src/orders/pricing.py         37      0   100%
+src/orders/repository.py      14      0   100%
+src/orders/service.py         36      0   100%
+--------------------------------------------------------
+TOTAL                        198      0   100%
+Required test coverage of 85% reached. Total coverage: 100.00%
+============================== 29 passed in 0.35s ==============================
