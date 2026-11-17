@@ -1,0 +1,6 @@
+Pedidos creados: 20000
+Throughput: 110,447 pedidos/s
+Latencia media: 0.0089 ms
+Latencia p95:   0.0097 ms
+Latencia p99:   0.0295 ms
+Eventos entregados: 20000

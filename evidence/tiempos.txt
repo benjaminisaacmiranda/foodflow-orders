@@ -1,0 +1,3 @@
+lint: 0.19 s
+test: 0.60 s
+build: 3.07 s

@@ -1,0 +1,7 @@
+src/orders/service.py - A (51.67)
+src/orders/repository.py - A (64.82)
+src/orders/__init__.py - A (100.00)
+src/orders/pricing.py - A (49.18)
+src/orders/domain.py - A (54.41)
+src/orders/api.py - A (52.12)
+src/orders/events.py - A (79.33)
